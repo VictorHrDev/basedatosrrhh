@@ -1,0 +1,7 @@
+CREATE TABLE empleados (
+    id_empleado INT PRIMARY KEY AUTO_INCREMENT,
+    codigo_empleado VARCHAR(20) UNIQUE NOT NULL,
+    fecha_ingreso DATE NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
