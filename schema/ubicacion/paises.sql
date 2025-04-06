@@ -1,0 +1,9 @@
+CREATE TABLE paises (
+    id_pais INT PRIMARY KEY AUTO_INCREMENT,
+    nombre_pais VARCHAR(100) UNIQUE NOT NULL,
+    gentilicio VARCHAR(100),
+    codigo_iso_3166_1_alfa2 VARCHAR(2) UNIQUE,
+    codigo_iso_3166_1_alfa3 VARCHAR(3) UNIQUE,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
