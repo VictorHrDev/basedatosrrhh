@@ -1,0 +1,6 @@
+CREATE TABLE tipos_documento (
+    id_tipo_documento INT PRIMARY KEY AUTO_INCREMENT,
+    nombre_tipo_documento VARCHAR(50) UNIQUE NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
