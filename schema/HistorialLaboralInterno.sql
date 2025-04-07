@@ -5,11 +5,16 @@ CREATE TABLE historial_laboral_interno (
     fecha_fin DATE,
     tipo_contrato VARCHAR(100),
     cargo VARCHAR(200) NOT NULL,
-    departamento VARCHAR(100),
+    id_area INT,
+    id_departamento INT,
+    id_seccion INT,
     salario DECIMAL(10, 2),
+    estado_empleado ENUM('Activo', 'Cesado') NOT NULL DEFAULT 'Activo',
     observaciones TEXT,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (id_empleado) REFERENCES empleados(id_empleado),
-    FOREIGN KEY (jefe_directo) REFERENCES empleados(id_empleado)
+    FOREIGN KEY (id_area) REFERENCES areas(id_area),
+    FOREIGN KEY (id_departamento) REFERENCES departamentos(id_departamento),
+    FOREIGN KEY (id_seccion) REFERENCES secciones(id_seccion)
 );
