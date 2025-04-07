@@ -7,7 +7,6 @@ CREATE TABLE historial_laboral_interno (
     cargo VARCHAR(200) NOT NULL,
     departamento VARCHAR(100),
     salario DECIMAL(10, 2),
-    jefe_directo INT,
     observaciones TEXT,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
