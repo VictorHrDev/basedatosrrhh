@@ -1,6 +1,7 @@
 CREATE TABLE informacion_personal_empleados (
     id_empleado INT PRIMARY KEY,
     direccion VARCHAR(255),
+    id_tipo_sangre INT,
     telefono VARCHAR(20),
     email VARCHAR(100),
     id_estado_civil INT,
@@ -19,5 +20,6 @@ CREATE TABLE informacion_personal_empleados (
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (id_empleado) REFERENCES empleados(id_empleado),
     FOREIGN KEY (id_estado_civil) REFERENCES estados_civiles(id_estado_civil),
-    FOREIGN KEY (id_tipo_discapacidad) REFERENCES tipos_discapacidad(id_tipo_discapacidad)
+    FOREIGN KEY (id_tipo_discapacidad) REFERENCES tipos_discapacidad(id_tipo_discapacidad),
+    FOREIGN KEY (id_tipo_sangre) REFERENCES tipos_sangre(id_tipo_sangre)
 );
