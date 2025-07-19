@@ -7,5 +7,5 @@ CREATE TABLE vacaciones_gozadas (
     observaciones TEXT,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_empleado) REFERENCES empleados(id)
+    FOREIGN KEY (id_empleado) REFERENCES empleados(id_empleado)
 );
