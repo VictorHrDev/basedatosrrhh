@@ -6,5 +6,5 @@ CREATE TABLE configuracion_beneficios (
     acumula_fondo_reserva BOOLEAN DEFAULT FALSE,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_empleado) REFERENCES empleados(id)
+    FOREIGN KEY (id_empleado) REFERENCES empleados(id_empleado)
 );
