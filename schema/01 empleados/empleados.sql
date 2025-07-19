@@ -18,6 +18,6 @@ CREATE TABLE empleados (
     FOREIGN KEY (id_sexo) REFERENCES sexos(id_sexo),
     FOREIGN KEY (pais_nacimiento) REFERENCES Pais(id_pais),
     FOREIGN KEY (provincia_nacimiento) REFERENCES Provincia(id_provincia),
-    FOREIGN KEY (canton_nacimiento) REFERENCES Canton(id_canton)
+    FOREIGN KEY (canton_nacimiento) REFERENCES Canton(id_canton),
     FOREIGN KEY (parroquia_nacimiento) REFERENCES Parroquia(id_parroquia)
 );
