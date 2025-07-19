@@ -15,5 +15,5 @@ CREATE TABLE historial_medico_empleados (
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,    
     FOREIGN KEY (id_empleado) REFERENCES empleados(id_empleado),
-    FOREIGN KEY (id_informacion_personal) REFERENCES informacion_personal_empleados(id_informacion_personal)
+    FOREIGN KEY (id_informacion_personal) REFERENCES informacion_personal_empleados(id_empleado)
 );
